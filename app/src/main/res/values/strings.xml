@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">家計簿</string>
+
+    <string name="pref_limit">今月の上限額を入力してください</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

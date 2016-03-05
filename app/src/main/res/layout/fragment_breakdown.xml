@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/large">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            fontPath="honoka.ttf"
+            android:text="今月の残り予算"
+            android:textColor="@color/black"
+            android:textSize="@dimen/medium_text" />
+
+        <TextView
+            android:id="@+id/budget_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            fontPath="honoka.ttf"
+            android:layout_marginTop="@dimen/small"
+            android:gravity="center"
+            android:text="00000000000"
+            android:textColor="@color/black"
+            android:textSize="@dimen/large_text" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <fefe.com.accountbook.views.MyListView
+            android:id="@+id/breakdown_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/breakdown_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            fontPath="honoka.ttf"
+            android:text="まだ今月のデータが\n\n登録されていません"
+            android:textColor="@color/black"
+            android:textSize="@dimen/large_text"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+</LinearLayout>

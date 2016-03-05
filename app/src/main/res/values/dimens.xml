@@ -1,0 +1,10 @@
+<resources>
+    <dimen name="large">16dp</dimen>
+    <dimen name="medium">12dp</dimen>
+    <dimen name="small">8dp</dimen>
+
+    <dimen name="large_text">25sp</dimen>
+    <dimen name="medium_text">20sp</dimen>
+    <dimen name="small_text">15sp</dimen>
+    <dimen name="xsmall_text">12sp</dimen>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F15C22</color>
+    <color name="colorPrimaryDark">#EB3C00</color>
+    <color name="colorAccent">#3498db</color>
+
+    <color name="drag_solid">#ffe8cf</color>
+
+    <color name="black">#333333</color>
+    <color name="white">#ecf0f1</color>
+
+    <color name="red">#e74c3c</color>
+</resources>

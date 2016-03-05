@@ -1,0 +1,133 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TableRow
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.beardedhen.androidbootstrap.AwesomeTextView
+            android:id="@+id/dropzone1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/dropzone"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/large_text"
+            app:bootstrapText="{fa_cutlery}\n食費" />
+
+        <com.beardedhen.androidbootstrap.AwesomeTextView
+            android:id="@+id/dropzone2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/dropzone"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/large_text"
+            app:bootstrapText="{fa_home}\n住居費" />
+
+        <com.beardedhen.androidbootstrap.AwesomeTextView
+            android:id="@+id/dropzone3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/dropzone"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/large_text"
+            app:bootstrapText="{fa_sun_o}\n光熱費" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.beardedhen.androidbootstrap.AwesomeTextView
+            android:id="@+id/dropzone4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/dropzone"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/large_text"
+            app:bootstrapText="{fa-users}\n交際費" />
+
+        <fefe.com.accountbook.views.ProductTextView
+            android:id="@+id/target"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            fontPath="honoka.ttf"
+            android:gravity="center"
+            android:text="ターゲット"
+            android:textColor="#ff0000"
+            android:textSize="20dp" />
+
+        <com.beardedhen.androidbootstrap.AwesomeTextView
+            android:id="@+id/dropzone5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/dropzone"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/large_text"
+            app:bootstrapText="{fa_female}\n衣服費" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.beardedhen.androidbootstrap.AwesomeTextView
+            android:id="@+id/dropzone6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/dropzone"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/large_text"
+            app:bootstrapText="{fa_cab}\n交通費" />
+
+        <com.beardedhen.androidbootstrap.AwesomeTextView
+            android:id="@+id/dropzone7"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/dropzone"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/large_text"
+            app:bootstrapText="{fa_child}\n趣味" />
+
+
+        <com.beardedhen.androidbootstrap.AwesomeTextView
+            android:id="@+id/dropzone8"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/dropzone"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/large_text"
+            app:bootstrapText="{fa_shopping_cart}\n雑費" />
+
+    </TableRow>
+
+</TableLayout>

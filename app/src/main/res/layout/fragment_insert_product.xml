@@ -1,0 +1,84 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/medium"
+        android:orientation="horizontal">
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/insert_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            app:bootstrapBrand="primary"
+            app:bootstrapSize="lg"
+            app:bootstrapText="{fa_close} キャンセル"
+            app:roundedCorners="true"
+            app:showOutline="true" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.3" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/insert_commit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                app:bootstrapBrand="danger"
+                app:bootstrapSize="lg"
+                app:bootstrapText="完了 {fa_arrow_right}"
+                app:roundedCorners="true"
+                app:showOutline="true" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <fefe.com.accountbook.views.MyListView
+            android:id="@+id/insert_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/insert_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="下のボタンを押して\n買ったものを追加してね"
+            android:textColor="@color/black"
+            android:textSize="@dimen/large_text"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/insert_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/medium"
+        app:bootstrapBrand="primary"
+        app:bootstrapSize="lg"
+        app:bootstrapText="追加 {fa_shopping_basket}"
+        app:roundedCorners="true"
+        app:showOutline="true" />
+
+</LinearLayout>
