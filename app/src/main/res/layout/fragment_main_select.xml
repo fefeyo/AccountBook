@@ -16,8 +16,8 @@
             android:layout_weight="1"
             android:background="@drawable/dropzone"
             android:gravity="center"
-            android:textColor="@color/black"
             android:textSize="@dimen/large_text"
+            app:bootstrapBrand="primary"
             app:bootstrapText="{fa_cutlery}\n食費" />
 
         <com.beardedhen.androidbootstrap.AwesomeTextView
@@ -28,9 +28,9 @@
             android:layout_weight="1"
             android:background="@drawable/dropzone"
             android:gravity="center"
-            android:textColor="@color/black"
             android:textSize="@dimen/large_text"
-            app:bootstrapText="{fa_home}\n住居費" />
+            app:bootstrapBrand="primary"
+            app:bootstrapText="{fa_home}\n日用品費" />
 
         <com.beardedhen.androidbootstrap.AwesomeTextView
             android:id="@+id/dropzone3"
@@ -40,7 +40,7 @@
             android:layout_weight="1"
             android:background="@drawable/dropzone"
             android:gravity="center"
-            android:textColor="@color/black"
+            app:bootstrapBrand="primary"
             android:textSize="@dimen/large_text"
             app:bootstrapText="{fa_sun_o}\n光熱費" />
 
@@ -58,8 +58,8 @@
             android:layout_weight="1"
             android:background="@drawable/dropzone"
             android:gravity="center"
-            android:textColor="@color/black"
             android:textSize="@dimen/large_text"
+            app:bootstrapBrand="primary"
             app:bootstrapText="{fa-users}\n交際費" />
 
         <fefe.com.accountbook.views.ProductTextView
@@ -67,7 +67,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            fontPath="honoka.ttf"
             android:gravity="center"
             android:text="ターゲット"
             android:textColor="#ff0000"
@@ -81,8 +80,8 @@
             android:layout_weight="1"
             android:background="@drawable/dropzone"
             android:gravity="center"
-            android:textColor="@color/black"
             android:textSize="@dimen/large_text"
+            app:bootstrapBrand="primary"
             app:bootstrapText="{fa_female}\n衣服費" />
 
     </TableRow>
@@ -99,8 +98,8 @@
             android:layout_weight="1"
             android:background="@drawable/dropzone"
             android:gravity="center"
-            android:textColor="@color/black"
             android:textSize="@dimen/large_text"
+            app:bootstrapBrand="primary"
             app:bootstrapText="{fa_cab}\n交通費" />
 
         <com.beardedhen.androidbootstrap.AwesomeTextView
@@ -111,8 +110,8 @@
             android:layout_weight="1"
             android:background="@drawable/dropzone"
             android:gravity="center"
-            android:textColor="@color/black"
             android:textSize="@dimen/large_text"
+            app:bootstrapBrand="primary"
             app:bootstrapText="{fa_child}\n趣味" />
 
 
@@ -124,8 +123,8 @@
             android:layout_weight="1"
             android:background="@drawable/dropzone"
             android:gravity="center"
-            android:textColor="@color/black"
             android:textSize="@dimen/large_text"
+            app:bootstrapBrand="primary"
             app:bootstrapText="{fa_shopping_cart}\n雑費" />
 
     </TableRow>

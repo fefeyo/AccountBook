@@ -2,7 +2,16 @@
 <resources>
     <color name="colorPrimary">#F15C22</color>
     <color name="colorPrimaryDark">#EB3C00</color>
-    <color name="colorAccent">#3498db</color>
+    <color name="colorAccent">#22b7f1</color>
+
+    <color name="eat">#f39c12</color>
+    <color name="house">#2c3e50</color>
+    <color name="utl">#f1c40f</color>
+    <color name="com">#3498db</color>
+    <color name="clt">#9b59b6</color>
+    <color name="trp">#2ecc71</color>
+    <color name="hob">#e74c3c</color>
+    <color name="exp">#95a5a6</color>
 
     <color name="drag_solid">#ffe8cf</color>
 

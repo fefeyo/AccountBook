@@ -1,49 +1,54 @@
-<LinearLayout
-    android:layout_height="match_parent"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:padding="@dimen/large"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <com.github.mikephil.charting.charts.CombinedChart
-        android:id="@+id/statistic_combined"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"/>
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        android:layout_weight="1">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/large">
+
+        <TextView
+            android:text="今月までの使用金額推移"
+            android:textColor="@color/black"
+            android:layout_marginBottom="@dimen/medium"
+            android:textSize="@dimen/medium_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.github.mikephil.charting.charts.CombinedChart
+            android:id="@+id/statistic_combined"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <TextView
+            android:text="今月使用した金額内訳"
+            android:layout_marginBottom="@dimen/medium"
+            android:textColor="@color/black"
+            android:textSize="@dimen/medium_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
         <com.github.mikephil.charting.charts.PieChart
             android:id="@+id/statistic_pie"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"/>
+            android:layout_marginTop="@dimen/medium"
+            android:layout_marginBottom="@dimen/medium"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent">
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/statistic_spinner"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/spinner_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-            <android.support.v7.widget.AppCompatSpinner
-                android:id="@+id/statistic_spinner"
-                android:layout_width="match_parent"
-                android:layout_height="35dp"/>
-
-            <GridView
-                android:id="@+id/statistic_genre"
-                android:numColumns="2"
-                android:layout_weight="1"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"/>
-
-        </LinearLayout>
+        <GridView
+            android:id="@+id/statistic_genre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="2" />
 
     </LinearLayout>
-
-
-</LinearLayout>
+</ScrollView>

@@ -2,6 +2,7 @@ package fefe.com.accountbook.functions;
 
 import android.content.ClipData;
 import android.graphics.Bitmap;
+import android.view.MotionEvent;
 import android.view.View;
 
 import org.json.JSONException;
@@ -13,16 +14,16 @@ import fefe.com.accountbook.views.ProductTextView;
 /**
  * Created by USER on 2015/12/08.
  */
-public class ObjectLongClickListener implements View.OnLongClickListener{
+public class ObjectTouchListener implements View.OnTouchListener{
 
     private Bitmap dragIcon;
 
-    public ObjectLongClickListener(Bitmap dragIcon){
+    public ObjectTouchListener(Bitmap dragIcon){
         this.dragIcon = dragIcon;
     }
 
     @Override
-    public boolean onLongClick(View v) {
+    public boolean onTouch(View v, MotionEvent event) {
         final Product item = ((ProductTextView)v).getProduct();
 //        受け渡しデータ
         JSONObject obj = new JSONObject();
@@ -37,6 +38,7 @@ public class ObjectLongClickListener implements View.OnLongClickListener{
         View.DragShadowBuilder shadow = new ObjectImageBuilder(v, dragIcon);
 //        ドラッグを開始
         v.startDrag(clip, shadow, v, 0);
+
         return true;
     }
 }

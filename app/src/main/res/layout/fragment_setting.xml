@@ -1,25 +1,148 @@
-<FrameLayout
-    android:layout_height="match_parent"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:padding="@dimen/large"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:layout_height="match_parent"
+    android:padding="@dimen/large">
 
     <LinearLayout
-        android:layout_gravity="center"
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <TextView
-            android:text="設定"
-            android:textSize="@dimen/medium_text"
-            android:textColor="@color/black"
-            android:layout_marginBottom="@dimen/small"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/medium"
+            android:text="今月の予算"
+            android:textColor="@color/black"
+            android:textSize="@dimen/medium_text" />
 
+        <EditText
+            android:id="@+id/month_max"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/medium"
+            android:hint="予算を入力してください"
+            android:inputType="number"
+            android:maxLength="9"
+            android:textSize="@dimen/small_text" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/medium"
+            android:text="※予算の更新は月に1回のみしか行えません"
+            android:textColor="@color/red"
+            android:textSize="@dimen/small_text" />
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/month_max_sync"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginBottom="@dimen/medium"
+            android:text="更新"
+            app:bootstrapBrand="danger"
+            app:bootstrapSize="md"
+            app:roundedCorners="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/medium"
+            android:text="家賃"
+            android:textColor="@color/black"
+            android:textSize="@dimen/medium_text" />
+
+        <EditText
+            android:id="@+id/rent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/medium"
+            android:hint="家賃を入力してください"
+            android:inputType="text"
+            android:textSize="@dimen/small_text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/medium"
+            android:text="通信費"
+            android:textColor="@color/black"
+            android:textSize="@dimen/medium_text" />
+
+        <EditText
+            android:id="@+id/connect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/medium"
+            android:hint="家賃を入力してください"
+            android:inputType="text"
+            android:textSize="@dimen/small_text" />
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/medium"
+                android:text="Web版へのログイン"
+                android:textColor="@color/black"
+                android:textSize="@dimen/medium_text" />
+
+            <EditText
+                android:id="@+id/web_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/medium"
+                android:hint="IDを入力してください"
+                android:inputType="text"
+                android:textSize="@dimen/small_text" />
+
+            <EditText
+                android:id="@+id/web_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/medium"
+                android:hint="パスワードを入力してください"
+                android:inputType="textPassword"
+                android:textSize="@dimen/small_text" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/web_new"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="@dimen/medium"
+                    android:text="新規登録"
+                    app:bootstrapBrand="primary"
+                    app:bootstrapSize="md"
+                    app:roundedCorners="true" />
+
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/web_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="@dimen/medium"
+                    android:text="ログイン"
+                    app:bootstrapBrand="warning"
+                    app:bootstrapSize="md"
+                    app:roundedCorners="true" />
+
+            </LinearLayout>
+        </LinearLayout>
 
     </LinearLayout>
 
-</FrameLayout>
+</ScrollView>

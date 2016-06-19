@@ -12,11 +12,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
 
+import com.activeandroid.query.Select;
+
+import org.joda.time.DateTime;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
 import fefe.com.accountbook.R;
+import fefe.com.accountbook.item.Month;
 import fefe.com.accountbook.item.Product;
 
 import static butterknife.ButterKnife.findById;
@@ -50,7 +55,7 @@ public class InsertDialogFragment extends DialogFragment{
         final TextInputLayout cost_content = findById(content, R.id.cost_content);
         cost_content.setErrorEnabled(true);
 
-        builder.setMessage("買ったもの");
+        builder.setTitle("買ったもの");
         builder.setPositiveButton("決定", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -62,12 +67,20 @@ public class InsertDialogFragment extends DialogFragment{
                     cost_content.setError("買ったものの値段を入力してください");
                     return;
                 }
+                DateTime now = DateTime.now();
+                Month month = new Select().from(Month.class).where("year = ?", now.year().get()).and("month = ?", now.monthOfYear().get()).executeSingle();
+                if(null == month) {
+                    month = new Month();
+                    month.max = getActivity().getSharedPreferences("accountbook", Context.MODE_PRIVATE).getInt("max", 30000);
+                    month.month = now.getMonthOfYear();
+                    month.year = now.getYear();
+                    month.save();
+                }
                 final Product product = new Product();
                 product.name = name.getText().toString();
                 product.cost = Integer.parseInt(cost.getText().toString());
-                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-                product.date = sdf.format(new Date());
-                product.month = Calendar.getInstance().get(Calendar.MONTH) ;
+                product.date = now.toLocalDate().toString();
+                product.month = month;
                 listener.onPositiveClick(product);
             }
         });

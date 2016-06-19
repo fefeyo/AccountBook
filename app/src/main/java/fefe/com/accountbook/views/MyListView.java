@@ -1,6 +1,8 @@
 package fefe.com.accountbook.views;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.util.AttributeSet;
 
 import com.baoyz.swipemenulistview.SwipeMenu;
@@ -28,11 +30,9 @@ public class MyListView extends SwipeMenuListView{
             @Override
             public void create(SwipeMenu menu) {
                 SwipeMenuItem deleteItem = new SwipeMenuItem(context);
-                deleteItem.setBackground(R.color.red);
-                deleteItem.setWidth(180);
-                deleteItem.setTitle("削除");
-                deleteItem.setTitleColor(R.color.white);
-                deleteItem.setTitleSize(20);
+                deleteItem.setBackground(new ColorDrawable(Color.rgb(0xF9, 0x3F, 0x25)));
+                deleteItem.setWidth(120);
+                deleteItem.setIcon(android.R.drawable.ic_menu_delete);
                 menu.addMenuItem(deleteItem);
             }
         };

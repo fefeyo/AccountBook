@@ -32,6 +32,7 @@ public class InsertListAdapter extends ArrayAdapter<Product> {
         title.setText(item.name);
         TextView content = findById(convertView, R.id.content);
         content.setText(item.cost+"円");
+        findById(convertView, R.id.genre).setVisibility(View.GONE);
 
         return convertView;
     }

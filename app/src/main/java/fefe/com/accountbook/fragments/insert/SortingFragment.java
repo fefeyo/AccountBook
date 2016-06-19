@@ -5,6 +5,7 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -17,7 +18,7 @@ import butterknife.InjectView;
 import fefe.com.accountbook.MainApplication;
 import fefe.com.accountbook.R;
 import fefe.com.accountbook.functions.ObjectDragListener;
-import fefe.com.accountbook.functions.ObjectLongClickListener;
+import fefe.com.accountbook.functions.ObjectTouchListener;
 import fefe.com.accountbook.views.ProductTextView;
 import fefe.com.accountbook.item.Product;
 
@@ -44,7 +45,7 @@ public class SortingFragment extends Fragment implements ObjectDragListener.OnDr
     AwesomeTextView dropzone8;
 
     private ObjectDragListener dragListener;
-    private ObjectLongClickListener longClickListener;
+    private ObjectTouchListener touchListener;
     private OnSortingFinishedListener listener;
 
     private ArrayList<Product> sordItems;
@@ -62,7 +63,7 @@ public class SortingFragment extends Fragment implements ObjectDragListener.OnDr
     private void init(){
         dragListener = new ObjectDragListener();
         dragListener.setOnDragFinishedListener(this);
-        longClickListener = new ObjectLongClickListener(BitmapFactory.decodeResource(getResources(), R.drawable.drag_image));
+        touchListener = new ObjectTouchListener(BitmapFactory.decodeResource(getResources(), R.drawable.drag_image));
         dropzone1.setOnDragListener(dragListener);
         dropzone2.setOnDragListener(dragListener);
         dropzone3.setOnDragListener(dragListener);
@@ -71,7 +72,7 @@ public class SortingFragment extends Fragment implements ObjectDragListener.OnDr
         dropzone6.setOnDragListener(dragListener);
         dropzone7.setOnDragListener(dragListener);
         dropzone8.setOnDragListener(dragListener);
-        target.setOnLongClickListener(longClickListener);
+        target.setOnTouchListener(touchListener);
         sordItems = ((MainApplication)getActivity().getApplication()).getInsertProducts();
         target.setProductItem(sordItems.get(0));
         sordItems.remove(0);

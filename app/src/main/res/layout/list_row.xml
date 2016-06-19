@@ -2,26 +2,40 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="@dimen/large">
+    android:orientation="horizontal">
+
+    <com.beardedhen.androidbootstrap.AwesomeTextView
+        android:id="@+id/genre"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:text="ジャンル"
+        android:textColor="@color/black"
+        android:textSize="@dimen/medium_text" />
 
     <TextView
         android:id="@+id/title"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="3"
         android:layout_height="wrap_content"
         android:ellipsize="end"
         android:text="商品名"
+        android:padding="20dp"
         android:textColor="@color/black"
         android:textSize="@dimen/medium_text" />
 
     <TextView
         android:id="@+id/content"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="3"
         android:layout_height="wrap_content"
         android:ellipsize="end"
         android:gravity="right"
         android:text="料金"
+        android:padding="20dp"
         android:textColor="@color/black"
-        android:textSize="@dimen/small_text" />
+        android:textSize="@dimen/medium_text" />
 
 </LinearLayout>
